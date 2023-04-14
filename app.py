@@ -4,7 +4,7 @@ from sklearn.datasets import load_iris
 import io
 def happy(l1:float,l2:float):
         happiness = l1-l2
-        if (happiness < 100) and (happiness > 75):
+        if (happiness <= 100) and (happiness > 75):
             st.markdown("# Sei felicissimo!")
         elif (happiness <= 75) and (happiness > 50):
             st.markdown("# Sei proprio felice!")
@@ -14,7 +14,7 @@ def happy(l1:float,l2:float):
             st.markdown("# Sei a posto!")
         elif (happiness <= -50) and (happiness > -75):
             st.markdown("# Sei Triste! :(")
-        elif (happiness <= -75) and (happiness > -100):
+        elif (happiness <= -75) and (happiness >= -100):
             st.markdown("# Sei GHISLY!")
 def add_bg_from_url():
     st.markdown(
